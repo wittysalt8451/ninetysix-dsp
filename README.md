@@ -93,6 +93,26 @@ If you prefer includes relative to the firmware project root only:
 #include "library/envelopes/Envelope.h"
 ```
 
+## Unit tests (host)
+
+Pure helpers and `Envelope` are covered with **[doctest](https://github.com/doctest/doctest)** (`third_party/doctest/doctest.h`, v2.4.11). Daisy-dependent code is not built in this suite.
+
+**Makefile (no CMake required):**
+
+```bash
+make -f Makefile.tests test
+```
+
+**CMake:**
+
+```bash
+cmake -B build -DBUILD_TESTING=ON
+cmake --build build
+ctest --test-dir build
+```
+
+Tests live in `tests/test_utils.cpp`. Add cases there or split into more translation units as the suite grows.
+
 ## Requirements
 
 - C++17 or later

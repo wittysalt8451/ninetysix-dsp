@@ -1,0 +1,29 @@
+# Host unit tests (doctest). Usage: make -f Makefile.tests
+# Requires: clang++ or set CXX=g++
+
+CXX      ?= clang++
+CXXFLAGS ?= -std=c++17 -O2 -Wall -Wextra -I. -Ithird_party
+BUILD    ?= build
+OUT      := $(BUILD)/sudwalfulkaan_tests
+
+SOURCES := tests/test_utils.cpp \
+	utils/Mapping.cpp \
+	utils/Tempo.cpp \
+	utils/Slew.cpp \
+	utils/EnvelopeFollower.cpp \
+	envelopes/Envelope.cpp
+
+.PHONY: test check clean
+
+$(OUT): $(SOURCES) third_party/doctest/doctest.h | $(BUILD)
+	$(CXX) $(CXXFLAGS) -o $@ $(SOURCES)
+	chmod +x $@
+
+$(BUILD):
+	mkdir -p $(BUILD)
+
+test check: $(OUT)
+	$(OUT)
+
+clean:
+	rm -f $(OUT)
