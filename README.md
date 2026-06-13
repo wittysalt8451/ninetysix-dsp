@@ -29,6 +29,7 @@ All types live in namespace `sudwalfulkaan`.
 | StereoChorus | modulation | Stereo chorus (DaisySP) |
 | StereoPhaser | modulation | Stereo phaser with LFO (DaisySP) |
 | StereoReverbSc | reverb | Stereo reverb (DaisySP LGPL) |
+| SpectralStretch | spectral | Paulstretch-style spectral time stretch (crossfaded random-phase grains) with spectral pitch shift, onset-following playhead and freeze |
 
 ## Envelopes
 
@@ -58,6 +59,8 @@ All types live in namespace `sudwalfulkaan`.
 | EnvelopeFollower | Smoothed stereo level follower (0..1), per-instance state |
 | Slew | `SlewTowards` — one-pole step toward a target |
 | Tempo | `CalculateReleaseTime` — BPM-synced release time in seconds |
+| Fft | Allocation-free radix-2 complex FFT with caller-owned twiddle tables |
+| SpscRingBuffer | Lock-free single-producer/single-consumer float ring (ISR ↔ main loop) |
 
 Migrating from the old single `tools.cpp` is documented in [REFACTOR_TOOLS.md](REFACTOR_TOOLS.md). Folder layout changes (envelopes, control, generators) are in [REFACTOR_LAYOUT.md](REFACTOR_LAYOUT.md).
 

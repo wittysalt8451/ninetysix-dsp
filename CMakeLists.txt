@@ -12,11 +12,15 @@ if(BUILD_TESTING)
 
   add_executable(sudwalfulkaan_tests
     tests/test_utils.cpp
+    tests/test_spectral.cpp
     utils/Mapping.cpp
     utils/Tempo.cpp
     utils/Slew.cpp
     utils/EnvelopeFollower.cpp
+    utils/Fft.cpp
+    utils/SpscRingBuffer.cpp
     envelopes/Envelope.cpp
+    effects/spectral/SpectralStretch.cpp
   )
 
   target_include_directories(sudwalfulkaan_tests PRIVATE

@@ -23,6 +23,9 @@ namespace sudwalfulkaan {
   
       float GetPotValue(int index) const;     // mapped & smoothed [min..max] or [0..1]
       float GetRawPotValue(int index) const;  // smoothed raw ADC [0..1]
+
+      /** @brief Current panel toggle (B8) state after debounce; updated in Update(). */
+      bool GetTogglePressed() const { return toggle_state_; }
   
       void SetPotValue(int index, float value);  // feed raw ADC [0..1]
   

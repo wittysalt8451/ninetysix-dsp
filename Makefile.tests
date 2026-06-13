@@ -7,11 +7,15 @@ BUILD    ?= build
 OUT      := $(BUILD)/sudwalfulkaan_tests
 
 SOURCES := tests/test_utils.cpp \
+	tests/test_spectral.cpp \
 	utils/Mapping.cpp \
 	utils/Tempo.cpp \
 	utils/Slew.cpp \
 	utils/EnvelopeFollower.cpp \
-	envelopes/Envelope.cpp
+	utils/Fft.cpp \
+	utils/SpscRingBuffer.cpp \
+	envelopes/Envelope.cpp \
+	effects/spectral/SpectralStretch.cpp
 
 .PHONY: test check clean
 
