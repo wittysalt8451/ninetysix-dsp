@@ -1,5 +1,5 @@
 #include "filters/Biquad.h"
-#include "daisysp.h"
+#include "utils/Mapping.h"
 #include <cmath>
 #include <algorithm>
 
@@ -22,17 +22,17 @@ void ninetysix::Biquad::SetType(Biquad::Type type) {
 }
 
 void ninetysix::Biquad::SetFreq(float freq) {
-    freq_ = daisysp::fclamp(freq, 10.0f, sample_rate_ * 0.45f); // Nyquist protection
+    freq_ = Clamp(freq, 10.0f, sample_rate_ * 0.45f); // Nyquist protection
     CalcCoefficients();
 }
 
 void ninetysix::Biquad::SetQ(float q) {
-    q_ = daisysp::fclamp(q, 0.01f, 10.0f); // avoid div by 0
+    q_ = Clamp(q, 0.01f, 10.0f); // avoid div by 0
     CalcCoefficients();
 }
 
 void ninetysix::Biquad::SetGainDb(float gain_db) {
-    gain_db_ = daisysp::fclamp(gain_db, -24.0f, 24.0f);
+    gain_db_ = Clamp(gain_db, -24.0f, 24.0f);
     CalcCoefficients();
 }
 

@@ -2,9 +2,9 @@
 #ifndef SWF_STEREOCHORUS_H
 #define SWF_STEREOCHORUS_H
 
-#include "daisysp.h"
-
-using namespace daisysp;
+#include <cstddef>
+#include "utils/DelayLine.h"
+#include "utils/Lfo.h"
 
 namespace ninetysix {
     class StereoChorus {
@@ -21,10 +21,10 @@ namespace ninetysix {
     private:
         static constexpr size_t MAX_DELAY = 480; // Max delay samples (~10ms @ 48kHz)
 
-        DelayLine<float, MAX_DELAY> delayL, delayR;
-        Oscillator lfoL, lfoR;
+        DelayLine<MAX_DELAY> delayL, delayR;
+        Lfo lfoL, lfoR;
         float sample_rate_;
-        float rate_, depth_, mix_, feedback_, intensity_;
+        float rate_, depth_, mix_, feedback_;
     };
 }
 #endif // SWF_STEREOCHORUS_H

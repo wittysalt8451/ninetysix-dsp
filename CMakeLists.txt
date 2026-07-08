@@ -14,6 +14,7 @@ if(BUILD_TESTING)
     tests/test_utils.cpp
     tests/test_spectral.cpp
     tests/test_reverb.cpp
+    tests/test_modulation.cpp
     utils/Mapping.cpp
     utils/Tempo.cpp
     utils/Slew.cpp
@@ -23,10 +24,15 @@ if(BUILD_TESTING)
     envelopes/Envelope.cpp
     effects/spectral/SpectralStretch.cpp
     effects/reverb/FDN4Reverb.cpp
+    effects/modulation/StereoChorus.cpp
+    effects/modulation/StereoPhaser.cpp
+    effects/filters/Biquad.cpp
+    effects/dynamics/Limiter.cpp
   )
 
   target_include_directories(ninetysix_tests PRIVATE
     ${CMAKE_CURRENT_SOURCE_DIR}
+    ${CMAKE_CURRENT_SOURCE_DIR}/effects
     ${CMAKE_CURRENT_SOURCE_DIR}/third_party
   )
 

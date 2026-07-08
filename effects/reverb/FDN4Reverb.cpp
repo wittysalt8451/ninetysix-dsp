@@ -4,6 +4,9 @@
 
 using namespace ninetysix;
 
+// C++14: an odr-used static constexpr array needs an out-of-class definition
+constexpr size_t FDN4Reverb::kNominalLengths[];
+
 namespace {
     constexpr float kTwoPi = 6.28318530717958647692f;
     // Mutually detuned LFO rates (Hz): fast enough to break up comb

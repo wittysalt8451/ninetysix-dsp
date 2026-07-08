@@ -2,13 +2,14 @@
 # Requires: clang++ or set CXX=g++
 
 CXX      ?= clang++
-CXXFLAGS ?= -std=c++17 -O2 -Wall -Wextra -I. -Ithird_party
+CXXFLAGS ?= -std=c++17 -O2 -Wall -Wextra -I. -Ieffects -Ithird_party
 BUILD    ?= build
 OUT      := $(BUILD)/ninetysix_tests
 
 SOURCES := tests/test_utils.cpp \
 	tests/test_spectral.cpp \
 	tests/test_reverb.cpp \
+	tests/test_modulation.cpp \
 	utils/Mapping.cpp \
 	utils/Tempo.cpp \
 	utils/Slew.cpp \
@@ -17,7 +18,11 @@ SOURCES := tests/test_utils.cpp \
 	utils/SpscRingBuffer.cpp \
 	envelopes/Envelope.cpp \
 	effects/spectral/SpectralStretch.cpp \
-	effects/reverb/FDN4Reverb.cpp
+	effects/reverb/FDN4Reverb.cpp \
+	effects/modulation/StereoChorus.cpp \
+	effects/modulation/StereoPhaser.cpp \
+	effects/filters/Biquad.cpp \
+	effects/dynamics/Limiter.cpp
 
 .PHONY: test check clean
 

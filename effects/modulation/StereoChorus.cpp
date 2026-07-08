@@ -1,8 +1,11 @@
 #include "modulation/StereoChorus.h"
-#include "Synthesis/oscillator.h"
+#include "utils/Mapping.h"
 
-using namespace daisysp;
 using namespace ninetysix;
+
+// The DaisySP oscillator this LFO replaces ran at its default amplitude of
+// 0.5; keep that scale so the modulation range stays identical.
+static constexpr float kLfoAmp = 0.5f;
 
 void StereoChorus::Init(float sample_rate) {
     sample_rate_ = sample_rate;
@@ -11,9 +14,6 @@ void StereoChorus::Init(float sample_rate) {
 
     lfoL.Init(sample_rate_);
     lfoR.Init(sample_rate_);
-
-    lfoL.SetWaveform(Oscillator::WAVE_TRI);
-    lfoR.SetWaveform(Oscillator::WAVE_TRI);
 
     SetRate(.5f);
     SetDepth(.005f);
@@ -37,12 +37,12 @@ void StereoChorus::SetMix(float mix) {
 }
 
 void StereoChorus::SetFeedback(float feedback) {
-    feedback_ = fclamp(feedback, 0.0f, 0.95f);  // Prevent runaway feedback
+    feedback_ = Clamp(feedback, 0.0f, 0.95f);  // Prevent runaway feedback
 }
 
 void StereoChorus::SetIntensity(float intensity) {
     // Clamp intensity to 0.0 - 1.0 range
-    intensity = fclamp(intensity, 0.0f, 1.0f);
+    intensity = Clamp(intensity, 0.0f, 1.0f);
 
     // Scale parameters based on intensity
     float rate = 0.1f + intensity * 4.9f;   // Rate: 0.1 Hz (slow) → 5 Hz (fast)
@@ -58,8 +58,8 @@ void StereoChorus::SetIntensity(float intensity) {
 }
 
 float StereoChorus::ProcessLeft(float in) {
-    float mod = lfoL.Process() * depth_ * sample_rate_;
-    float delayTime = fclamp(mod + 5.0f, 1.0f, MAX_DELAY - 1.0f);
+    float mod = lfoL.ProcessTriangle() * kLfoAmp * depth_ * sample_rate_;
+    float delayTime = Clamp(mod + 5.0f, 1.0f, MAX_DELAY - 1.0f);
     delayL.SetDelay(delayTime);
 
     float wet = delayL.Read();
@@ -69,8 +69,8 @@ float StereoChorus::ProcessLeft(float in) {
 }
 
 float StereoChorus::ProcessRight(float in) {
-    float mod = lfoR.Process() * depth_ * sample_rate_;
-    float delayTime = fclamp(mod + 5.0f, 1.0f, MAX_DELAY - 1.0f);
+    float mod = lfoR.ProcessTriangle() * kLfoAmp * depth_ * sample_rate_;
+    float delayTime = Clamp(mod + 5.0f, 1.0f, MAX_DELAY - 1.0f);
     delayR.SetDelay(delayTime);
 
     float wet = delayR.Read();

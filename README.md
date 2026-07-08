@@ -26,8 +26,8 @@ All types live in namespace `ninetysix`.
 | Limiter | dynamics | Stereo limiter with envelope follower |
 | Ducker | dynamics | Stereo sidechain ducker |
 | MidSide | spatial | Mid/side stereo width processing |
-| StereoChorus | modulation | Stereo chorus (DaisySP) |
-| StereoPhaser | modulation | Stereo phaser with LFO (DaisySP) |
+| StereoChorus | modulation | Stereo chorus |
+| StereoPhaser | modulation | Stereo phaser with LFO |
 | FDN4Reverb | reverb | 4-line FDN reverb (Householder matrix, decorrelated stereo, no external deps) |
 | SpectralStretch | spectral | Paulstretch-style spectral time stretch (crossfaded random-phase grains) with spectral pitch shift, onset-following playhead and freeze |
 
@@ -55,7 +55,9 @@ All types live in namespace `ninetysix`.
 
 | Module | Description |
 |--------|-------------|
-| Mapping | `MapLinear`, `MapLogarithmic` (normalized pot to range) |
+| Mapping | `Clamp`, `MapLinear`, `MapLogarithmic` (normalized pot to range) |
+| Lfo | Phase-accumulator LFO (sine, triangle) for modulation effects |
+| DelayLine | Statically sized fractional delay line with linear interpolation |
 | EnvelopeFollower | Smoothed stereo level follower (0..1), per-instance state |
 | Slew | `SlewTowards` — one-pole step toward a target |
 | Tempo | `CalculateReleaseTime` — BPM-synced release time in seconds |
@@ -118,9 +120,8 @@ Tests live in `tests/test_utils.cpp`. Add cases there or split into more transla
 
 ## Requirements
 
-- C++17 or later
-- [libDaisy](https://github.com/electro-smith/libDaisy)
-- [DaisySP](https://github.com/electro-smith/DaisySP) (for chorus, phaser, biquad)
+- C++14 or later
+- No library dependencies: the DSP code is self-contained (firmware projects still use [libDaisy](https://github.com/electro-smith/libDaisy) for the hardware itself)
 
 ## Author
 

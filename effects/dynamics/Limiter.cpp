@@ -1,9 +1,7 @@
 #include "dynamics/Limiter.h"
 #include <cmath>
-#include "daisysp.h"
+#include "utils/Mapping.h"
 
-// Both daisysp and ninetysix define a Limiter, so definitions must be
-// explicitly qualified
 using namespace ninetysix;
 
 void ninetysix::Limiter::Init(float threshold, float attack, float release) {
@@ -47,7 +45,7 @@ void ninetysix::Limiter::SetRelease(float r) { release_ = r; }
 void ninetysix::Limiter::SetSoftness(float s) { softness_ = s; }
 void ninetysix::Limiter::SetEnvelope(float e) {
     // Clamp input range (0.0 - 1.0)
-    e = daisysp::fclamp(e, 0.0f, 1.0f);
+    e = Clamp(e, 0.0f, 1.0f);
 
     // Map attack: 0.001s (1ms) → 0.1s (100ms) (logarithmic feel)
     float attack = 0.1f - std::log(e + 1.0f) * 0.099f;
