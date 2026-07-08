@@ -28,7 +28,7 @@ All types live in namespace `ninetysix`.
 | MidSide | spatial | Mid/side stereo width processing |
 | StereoChorus | modulation | Stereo chorus (DaisySP) |
 | StereoPhaser | modulation | Stereo phaser with LFO (DaisySP) |
-| StereoReverbSc | reverb | Stereo reverb (DaisySP LGPL) |
+| FDN4Reverb | reverb | 4-line FDN reverb (Householder matrix, decorrelated stereo, no external deps) |
 | SpectralStretch | spectral | Paulstretch-style spectral time stretch (crossfaded random-phase grains) with spectral pitch shift, onset-following playhead and freeze |
 
 ## Envelopes
@@ -120,7 +120,7 @@ Tests live in `tests/test_utils.cpp`. Add cases there or split into more transla
 
 - C++17 or later
 - [libDaisy](https://github.com/electro-smith/libDaisy)
-- [DaisySP](https://github.com/electro-smith/DaisySP) (for chorus, phaser, reverb, biquad)
+- [DaisySP](https://github.com/electro-smith/DaisySP) (for chorus, phaser, biquad)
 
 ## Author
 

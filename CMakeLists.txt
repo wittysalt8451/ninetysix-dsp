@@ -13,6 +13,7 @@ if(BUILD_TESTING)
   add_executable(ninetysix_tests
     tests/test_utils.cpp
     tests/test_spectral.cpp
+    tests/test_reverb.cpp
     utils/Mapping.cpp
     utils/Tempo.cpp
     utils/Slew.cpp
@@ -21,6 +22,7 @@ if(BUILD_TESTING)
     utils/SpscRingBuffer.cpp
     envelopes/Envelope.cpp
     effects/spectral/SpectralStretch.cpp
+    effects/reverb/FDN4Reverb.cpp
   )
 
   target_include_directories(ninetysix_tests PRIVATE

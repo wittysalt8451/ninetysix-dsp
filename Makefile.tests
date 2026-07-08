@@ -8,6 +8,7 @@ OUT      := $(BUILD)/ninetysix_tests
 
 SOURCES := tests/test_utils.cpp \
 	tests/test_spectral.cpp \
+	tests/test_reverb.cpp \
 	utils/Mapping.cpp \
 	utils/Tempo.cpp \
 	utils/Slew.cpp \
@@ -15,7 +16,8 @@ SOURCES := tests/test_utils.cpp \
 	utils/Fft.cpp \
 	utils/SpscRingBuffer.cpp \
 	envelopes/Envelope.cpp \
-	effects/spectral/SpectralStretch.cpp
+	effects/spectral/SpectralStretch.cpp \
+	effects/reverb/FDN4Reverb.cpp
 
 .PHONY: test check clean
 
