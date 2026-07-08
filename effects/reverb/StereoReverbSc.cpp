@@ -1,7 +1,7 @@
 #include "reverb/StereoReverbSc.h"
 
 using namespace daisysp;
-using namespace sudwalfulkaan;
+using namespace ninetysix;
 
 void StereoReverbSc::Init(float sample_rate, float* buffer, size_t size) {
     reverb_.Init(sample_rate);

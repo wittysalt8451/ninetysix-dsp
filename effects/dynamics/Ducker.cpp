@@ -1,6 +1,6 @@
 #include "dynamics/Ducker.h"
 
-namespace sudwalfulkaan
+namespace ninetysix
 {
     void Ducker::Init(float ducking_amount, float ducking_release, float sample_rate)
     {

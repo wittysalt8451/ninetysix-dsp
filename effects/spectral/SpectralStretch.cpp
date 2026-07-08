@@ -7,7 +7,7 @@
 // random-phase grains, equal-power compensation curve) follows the
 // paulstretch algorithm by Nasca Octavian Paul.
 
-namespace sudwalfulkaan {
+namespace ninetysix {
 
 namespace {
 constexpr float kTwoPi = 6.28318530717958647692f;
@@ -433,4 +433,4 @@ float SpectralStretch::NextRandomPhase() {
     return static_cast<float>(x) * kPhasePerRandomWord;
 }
 
-} // namespace sudwalfulkaan
+} // namespace ninetysix

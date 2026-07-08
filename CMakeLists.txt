@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.14)
-project(sudwalfulkaan-dsp LANGUAGES CXX)
+project(ninetysix-dsp LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -10,7 +10,7 @@ option(BUILD_TESTING "Build unit tests" ON)
 if(BUILD_TESTING)
   enable_testing()
 
-  add_executable(sudwalfulkaan_tests
+  add_executable(ninetysix_tests
     tests/test_utils.cpp
     tests/test_spectral.cpp
     utils/Mapping.cpp
@@ -23,12 +23,12 @@ if(BUILD_TESTING)
     effects/spectral/SpectralStretch.cpp
   )
 
-  target_include_directories(sudwalfulkaan_tests PRIVATE
+  target_include_directories(ninetysix_tests PRIVATE
     ${CMAKE_CURRENT_SOURCE_DIR}
     ${CMAKE_CURRENT_SOURCE_DIR}/third_party
   )
 
-  target_compile_definitions(sudwalfulkaan_tests PRIVATE DOCTEST_CONFIG_SUPER_FAST_ASSERTS)
+  target_compile_definitions(ninetysix_tests PRIVATE DOCTEST_CONFIG_SUPER_FAST_ASSERTS)
 
-  add_test(NAME sudwalfulkaan_tests COMMAND sudwalfulkaan_tests)
+  add_test(NAME ninetysix_tests COMMAND ninetysix_tests)
 endif()

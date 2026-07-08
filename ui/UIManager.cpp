@@ -2,11 +2,11 @@
 
 using namespace daisy;
 using namespace patch_sm;
-using namespace sudwalfulkaan;
+using namespace ninetysix;
 
 void UIManager::Init(const PotConfig pot_configs[4]) {
-    button_.Init(DaisyPatchSM::B7, 0, Switch::TYPE_MOMENTARY, Switch::POLARITY_INVERTED, Switch::PULL_UP);
-    toggle_.Init(DaisyPatchSM::B8, 0, Switch::TYPE_TOGGLE, Switch::POLARITY_NORMAL, Switch::PULL_UP);
+    button_.Init(DaisyPatchSM::B7, 0, Switch::TYPE_MOMENTARY, Switch::POLARITY_INVERTED, GPIO::Pull::PULLUP);
+    toggle_.Init(DaisyPatchSM::B8, 0, Switch::TYPE_TOGGLE, Switch::POLARITY_NORMAL, GPIO::Pull::PULLUP);
     last_toggle_state_ = toggle_.Pressed();
 
     for(int i = 0; i < 4; ++i) {

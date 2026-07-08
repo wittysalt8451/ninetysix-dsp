@@ -6,7 +6,7 @@
 #include <cmath>
 #include <algorithm>
 
-using namespace sudwalfulkaan;
+using namespace ninetysix;
 
 void LinkwitzRileyCrossover::Init(float cutoff, float sampleRate) {
     sampleRate_ = sampleRate;

@@ -8,7 +8,7 @@
 
 using namespace daisysp;
 
-namespace sudwalfulkaan {
+namespace ninetysix {
     class StereoReverbSc {
     public:
         void Init(float sample_rate, float* buffer, size_t size);

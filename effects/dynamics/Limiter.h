@@ -1,6 +1,6 @@
 #pragma once
 
-namespace sudwalfulkaan {
+namespace ninetysix {
 
 /**
  * @brief Peak limiter with envelope follower and soft clipping.
@@ -44,4 +44,4 @@ private:
     float softness_ = 5.0f; // Adjust this value for desired softness
 };
 
-} // namespace sudwalfulkaan
+} // namespace ninetysix

@@ -2,7 +2,7 @@
 
 #include <cstdint>
 
-namespace sudwalfulkaan {
+namespace ninetysix {
 
 /**
  * @brief Generates timed gate pulses for CV sequencer gate outputs.
@@ -43,4 +43,4 @@ private:
     uint32_t startMs_{0};
 };
 
-} // namespace sudwalfulkaan
+} // namespace ninetysix

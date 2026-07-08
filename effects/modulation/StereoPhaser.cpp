@@ -1,6 +1,6 @@
 #include "modulation/StereoPhaser.h"
 
-using namespace sudwalfulkaan;
+using namespace ninetysix;
 using namespace daisysp;
 
 void StereoPhaser::Init(float sample_rate)

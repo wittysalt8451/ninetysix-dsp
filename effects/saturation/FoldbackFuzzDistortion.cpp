@@ -1,7 +1,7 @@
 #include "FoldbackFuzzDistortion.h"
 #include <cmath>
 
-namespace sudwalfulkaan {
+namespace ninetysix {
 
 void FoldbackFuzzDistortion::Init() {
     drive01_ = 0.f;
@@ -32,4 +32,4 @@ float FoldbackFuzzDistortion::Process(float x) {
     return std::fabs(m - 2.f) - 1.f;
 }
 
-} // namespace sudwalfulkaan
+} // namespace ninetysix

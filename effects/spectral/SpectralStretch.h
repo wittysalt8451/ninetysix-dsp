@@ -7,7 +7,7 @@
 #include "utils/Fft.h"
 #include "utils/SpscRingBuffer.h"
 
-namespace sudwalfulkaan {
+namespace ninetysix {
 
 /**
  * @brief Caller-owned storage for one SpectralStretch channel.
@@ -249,4 +249,4 @@ private:
     uint32_t rngState_ = 1;
 };
 
-} // namespace sudwalfulkaan
+} // namespace ninetysix

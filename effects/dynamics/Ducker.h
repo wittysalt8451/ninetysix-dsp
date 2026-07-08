@@ -1,6 +1,6 @@
 #pragma once
 
-namespace sudwalfulkaan
+namespace ninetysix
 {
     class Ducker
     {

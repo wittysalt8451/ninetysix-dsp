@@ -4,7 +4,7 @@
 #include <cstddef>
 #include <cstdint>
 
-namespace sudwalfulkaan {
+namespace ninetysix {
 
 /**
  * @brief Lock-free single-producer / single-consumer float ring buffer.
@@ -53,4 +53,4 @@ private:
     std::atomic<uint32_t> readIndex_{0};
 };
 
-} // namespace sudwalfulkaan
+} // namespace ninetysix

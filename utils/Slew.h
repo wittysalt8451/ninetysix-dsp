@@ -1,6 +1,6 @@
 #pragma once
 
-namespace sudwalfulkaan {
+namespace ninetysix {
 
 /**
  * @brief One-pole step toward target (same as former SlewLimiter in tools.cpp).
@@ -8,4 +8,4 @@ namespace sudwalfulkaan {
  */
 float SlewTowards(float target, float current, float slewRate);
 
-} // namespace sudwalfulkaan
+} // namespace ninetysix

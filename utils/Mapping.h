@@ -1,6 +1,6 @@
 #pragma once
 
-namespace sudwalfulkaan {
+namespace ninetysix {
 
 /**
  * @brief Map normalized 0..1 to a linear range [min, max].
@@ -13,4 +13,4 @@ float MapLinear(float normalized, float min, float max);
  */
 float MapLogarithmic(float normalized, float min, float max);
 
-} // namespace sudwalfulkaan
+} // namespace ninetysix

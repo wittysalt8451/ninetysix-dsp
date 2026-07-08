@@ -3,7 +3,7 @@
 #include <cmath>
 #include <utility>
 
-namespace sudwalfulkaan {
+namespace ninetysix {
 
 namespace {
 constexpr double kTwoPi = 6.283185307179586476925286766559;
@@ -88,4 +88,4 @@ void Fft::Transform(float* real, float* imag, bool inverse) const {
     }
 }
 
-} // namespace sudwalfulkaan
+} // namespace ninetysix

@@ -1,7 +1,7 @@
 #include "AsymmetricRationalSaturation.h"
 #include <cmath>
 
-namespace sudwalfulkaan {
+namespace ninetysix {
 
 void AsymmetricRationalSaturation::Init() {
     drive01_ = 0.f;
@@ -30,4 +30,4 @@ float AsymmetricRationalSaturation::Process(float x) {
     return x * (ax + k) / (x * x + (k - 1.f) * ax + 1.f);
 }
 
-} // namespace sudwalfulkaan
+} // namespace ninetysix

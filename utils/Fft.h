@@ -2,7 +2,7 @@
 
 #include <cstddef>
 
-namespace sudwalfulkaan {
+namespace ninetysix {
 
 /**
  * @brief In-place radix-2 complex FFT with caller-owned twiddle tables.
@@ -44,4 +44,4 @@ private:
     const float* twiddleSin_ = nullptr;
 };
 
-} // namespace sudwalfulkaan
+} // namespace ninetysix

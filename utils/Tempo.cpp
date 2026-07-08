@@ -1,7 +1,7 @@
 #include "utils/Tempo.h"
 #include <algorithm>
 
-namespace sudwalfulkaan {
+namespace ninetysix {
 
 float CalculateReleaseTime(float bpm, float min_release, float max_release, float division) {
     if (bpm <= 0.0f) {
@@ -12,4 +12,4 @@ float CalculateReleaseTime(float bpm, float min_release, float max_release, floa
     return std::max(min_release, std::min(release_time, max_release));
 }
 
-} // namespace sudwalfulkaan
+} // namespace ninetysix

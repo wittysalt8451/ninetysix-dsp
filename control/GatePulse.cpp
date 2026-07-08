@@ -1,6 +1,6 @@
 #include "control/GatePulse.h"
 
-namespace sudwalfulkaan {
+namespace ninetysix {
 
 void GatePulse::StartPulse(uint32_t nowMs) {
     active_  = true;
@@ -13,4 +13,4 @@ void GatePulse::Update(uint32_t nowMs) {
     }
 }
 
-} // namespace sudwalfulkaan
+} // namespace ninetysix

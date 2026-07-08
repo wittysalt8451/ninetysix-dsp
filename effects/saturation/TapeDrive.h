@@ -4,7 +4,7 @@
 
 #include <cmath>
 
-namespace sudwalfulkaan {
+namespace ninetysix {
 
 /**
  * TapeDrive - Analog tape saturation emulation with low-pass filter
@@ -73,6 +73,6 @@ private:
     float Saturate(float in);
 };
 
-} // namespace sudwalfulkaan
+} // namespace ninetysix
 
 #endif // SWF_TAPE_DRIVE_H

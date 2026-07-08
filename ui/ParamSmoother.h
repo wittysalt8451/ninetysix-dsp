@@ -3,7 +3,7 @@
 #include <cmath>
 #include <algorithm>
 
-namespace sudwalfulkaan
+namespace ninetysix
 {
 class ParamSmoother
 {
@@ -41,4 +41,4 @@ class ParamSmoother
     float slewRate_;
     float threshold_;
 };
-} // namespace sudwalfulkaan
+} // namespace ninetysix

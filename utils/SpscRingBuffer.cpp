@@ -1,6 +1,6 @@
 #include "utils/SpscRingBuffer.h"
 
-namespace sudwalfulkaan {
+namespace ninetysix {
 
 namespace {
 constexpr size_t kMinCapacity = 2;
@@ -62,4 +62,4 @@ size_t SpscRingBuffer::Read(float* destination, size_t count) {
     return toRead;
 }
 
-} // namespace sudwalfulkaan
+} // namespace ninetysix

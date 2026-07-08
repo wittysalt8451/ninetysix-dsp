@@ -2,7 +2,7 @@
 
 #ifdef __cplusplus
 
-namespace sudwalfulkaan {
+namespace ninetysix {
 
 /**
  * @brief ADSR envelope generator (control/modulation, not an audio bus effect).
@@ -32,6 +32,6 @@ private:
     EnvelopeState state_;
 };
 
-} // namespace sudwalfulkaan
+} // namespace ninetysix
 
 #endif

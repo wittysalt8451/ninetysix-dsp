@@ -4,7 +4,7 @@
 CXX      ?= clang++
 CXXFLAGS ?= -std=c++17 -O2 -Wall -Wextra -I. -Ithird_party
 BUILD    ?= build
-OUT      := $(BUILD)/sudwalfulkaan_tests
+OUT      := $(BUILD)/ninetysix_tests
 
 SOURCES := tests/test_utils.cpp \
 	tests/test_spectral.cpp \

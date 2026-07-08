@@ -1,7 +1,7 @@
 #include "spatial/MidSide.h"
 #include <cmath>
 
-using namespace sudwalfulkaan;
+using namespace ninetysix;
 
 void MidSide::Init(float width, float sampleRate) {
     sampleRate_ = sampleRate;

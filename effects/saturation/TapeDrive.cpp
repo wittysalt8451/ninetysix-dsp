@@ -4,7 +4,7 @@
 #define M_PI 3.14159265358979323846
 #endif
 
-namespace sudwalfulkaan {
+namespace ninetysix {
 
 void TapeDrive::Init(float sample_rate) {
     sample_rate_ = sample_rate;
@@ -73,4 +73,4 @@ float TapeDrive::Saturate(float in) {
     return normalized * (1.0f - blend) + saturated * blend;
 }
 
-} // namespace sudwalfulkaan
+} // namespace ninetysix

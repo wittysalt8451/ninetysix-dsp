@@ -1,6 +1,6 @@
 #pragma once
 
-namespace sudwalfulkaan {
+namespace ninetysix {
 
 /**
  * @brief Asymmetric rational variable-gain saturator.
@@ -31,4 +31,4 @@ private:
     static constexpr float kDriveEps = 0.02f;
 };
 
-} // namespace sudwalfulkaan
+} // namespace ninetysix

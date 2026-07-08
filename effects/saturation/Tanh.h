@@ -6,7 +6,7 @@
 #ifdef __cplusplus
 #include <cmath>
 
-namespace sudwalfulkaan {
+namespace ninetysix {
     /** Tanh Saturation Effect */
     class TanhSaturation
     {

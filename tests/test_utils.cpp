@@ -7,7 +7,7 @@
 #include "utils/EnvelopeFollower.h"
 #include "envelopes/Envelope.h"
 
-using namespace sudwalfulkaan;
+using namespace ninetysix;
 
 TEST_CASE("MapLinear clamps and interpolates")
 {

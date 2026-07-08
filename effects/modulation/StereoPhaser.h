@@ -3,7 +3,7 @@
 #include <cstddef>
 #include "daisysp.h"
 
-namespace sudwalfulkaan
+namespace ninetysix
 {
     class StereoPhaser
     {

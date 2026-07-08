@@ -4,7 +4,7 @@
 #include <cmath>
 #include <functional>
 
-namespace sudwalfulkaan {
+namespace ninetysix {
 
   enum class MappingType { None, Linear, Log };
 
@@ -39,7 +39,7 @@ namespace sudwalfulkaan {
       bool toggle_state_ = false;
       bool last_toggle_state_ = false;
   
-      sudwalfulkaan::ParamSmoother pots_[4];
+      ninetysix::ParamSmoother pots_[4];
       PotConfig pot_configs_[4];
   
       void (*button_pressed_callback_)() = nullptr;

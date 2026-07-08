@@ -1,6 +1,6 @@
 #pragma once
 
-namespace sudwalfulkaan {
+namespace ninetysix {
 
 /**
  * @brief Soft diode clip: symmetric, round onset.
@@ -27,4 +27,4 @@ private:
     static constexpr float kDriveEps = 0.05f;
 };
 
-} // namespace sudwalfulkaan
+} // namespace ninetysix

@@ -7,7 +7,7 @@
 #include <cmath>
 #include <vector>
 
-using namespace sudwalfulkaan;
+using namespace ninetysix;
 
 namespace {
 constexpr float kTestTwoPi = 6.28318530717958647692f;

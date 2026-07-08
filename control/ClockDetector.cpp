@@ -1,6 +1,6 @@
 #include "control/ClockDetector.h"
 
-using namespace sudwalfulkaan;
+using namespace ninetysix;
 
 void ClockDetector::Init(float sample_rate, float smoothing_factor)
 {

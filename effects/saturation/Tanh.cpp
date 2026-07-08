@@ -1,7 +1,7 @@
 #include "saturation/Tanh.h"
 #include <cmath>
 
-using namespace sudwalfulkaan;
+using namespace ninetysix;
 
 void TanhSaturation::Init()
 {

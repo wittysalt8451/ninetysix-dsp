@@ -1,6 +1,6 @@
 #pragma once
 
-namespace sudwalfulkaan {
+namespace ninetysix {
 
 /**
  * @brief Foldback fuzz: pre-gain then triangle fold beyond ±1.
@@ -26,4 +26,4 @@ private:
     static constexpr float kMaxGain = 4.5f;
 };
 
-} // namespace sudwalfulkaan
+} // namespace ninetysix

@@ -1,6 +1,6 @@
 #pragma once
 
-namespace sudwalfulkaan {
+namespace ninetysix {
 
 /**
  * @brief BPM-synced release time (seconds), clamped to [min_release, max_release].
@@ -11,4 +11,4 @@ float CalculateReleaseTime(float bpm,
                            float max_release = 1.0f,
                            float division    = 4.0f);
 
-} // namespace sudwalfulkaan
+} // namespace ninetysix

@@ -6,7 +6,7 @@
 
 using namespace daisysp;
 
-namespace sudwalfulkaan {
+namespace ninetysix {
     class StereoChorus {
     public:
         void Init(float sample_rate);

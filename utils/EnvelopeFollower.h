@@ -1,6 +1,6 @@
 #pragma once
 
-namespace sudwalfulkaan {
+namespace ninetysix {
 
 /**
  * @brief One-pole smoothed level follower for stereo audio (mono level, 0..1).
@@ -24,4 +24,4 @@ private:
     float smoothing_      = 0.99f;
 };
 
-} // namespace sudwalfulkaan
+} // namespace ninetysix

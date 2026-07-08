@@ -2,7 +2,7 @@
 #include "Synthesis/oscillator.h"
 
 using namespace daisysp;
-using namespace sudwalfulkaan;
+using namespace ninetysix;
 
 void StereoChorus::Init(float sample_rate) {
     sample_rate_ = sample_rate;

@@ -2,10 +2,11 @@
 #include <cmath>
 #include "daisysp.h"
 
-using namespace daisysp;
-using namespace sudwalfulkaan;
+// Both daisysp and ninetysix define a Limiter, so definitions must be
+// explicitly qualified
+using namespace ninetysix;
 
-void Limiter::Init(float threshold, float attack, float release) {
+void ninetysix::Limiter::Init(float threshold, float attack, float release) {
     threshold_ = threshold;
     attack_ = attack;
     release_ = release;
@@ -13,7 +14,7 @@ void Limiter::Init(float threshold, float attack, float release) {
     envelope_ = 0.0f;
 }
 
-float Limiter::Process(float in) {
+float ninetysix::Limiter::Process(float in) {
     float abs_in = std::fabs(in);
 
     // Envelope follower with attack & release
@@ -40,13 +41,13 @@ float Limiter::Process(float in) {
     return out;
 }
 
-void Limiter::SetThreshold(float t) { threshold_ = t; }
-void Limiter::SetAttack(float a) { attack_ = a; }
-void Limiter::SetRelease(float r) { release_ = r; }
-void Limiter::SetSoftness(float s) { softness_ = s; }
-void Limiter::SetEnvelope(float e) {
+void ninetysix::Limiter::SetThreshold(float t) { threshold_ = t; }
+void ninetysix::Limiter::SetAttack(float a) { attack_ = a; }
+void ninetysix::Limiter::SetRelease(float r) { release_ = r; }
+void ninetysix::Limiter::SetSoftness(float s) { softness_ = s; }
+void ninetysix::Limiter::SetEnvelope(float e) {
     // Clamp input range (0.0 - 1.0)
-    e = fclamp(e, 0.0f, 1.0f);
+    e = daisysp::fclamp(e, 0.0f, 1.0f);
 
     // Map attack: 0.001s (1ms) → 0.1s (100ms) (logarithmic feel)
     float attack = 0.1f - std::log(e + 1.0f) * 0.099f;

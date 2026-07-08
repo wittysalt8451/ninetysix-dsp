@@ -1,6 +1,6 @@
 #pragma once
 
-namespace sudwalfulkaan {
+namespace ninetysix {
 
 /**
  * @brief One-pole DC blocking high-pass (HPF at ~20 Hz @ 48 kHz with default R).
@@ -25,4 +25,4 @@ private:
     float y1_ = 0.f;
 };
 
-} // namespace sudwalfulkaan
+} // namespace ninetysix

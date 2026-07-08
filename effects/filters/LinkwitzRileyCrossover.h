@@ -3,7 +3,7 @@
 
 #include <cmath>
 
-namespace sudwalfulkaan {
+namespace ninetysix {
     class LinkwitzRileyCrossover {
         public:
             void Init(float cutoff, float sampleRate);
@@ -18,6 +18,6 @@ namespace sudwalfulkaan {
             float a0_, a1_, a2_, b1_, b2_; // Coefficients for Butterworth filters
             float lowPrev1_, lowPrev2_, highPrev1_, highPrev2_;
     };
-} // namespace sudwalfulkaan
+} // namespace ninetysix
 
 #endif // CROSSOVER_H

@@ -1,6 +1,6 @@
 #include "envelopes/Envelope.h"
 
-using namespace sudwalfulkaan;
+using namespace ninetysix;
 
 void Envelope::Init(float attackTime, float decayTime, float sustainLevel, float releaseTime, float sampleRate)
 {

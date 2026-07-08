@@ -4,7 +4,7 @@
 #ifdef __cplusplus
 #include <cmath>
 
-namespace sudwalfulkaan {
+namespace ninetysix {
 
     /**
      * @brief Biquad IIR filter (LP, HP, BP, notch, peak, shelves).
@@ -45,7 +45,7 @@ namespace sudwalfulkaan {
             float z1_ = 0.0f, z2_ = 0.0f;
     };
 
-} // namespace sudwalfulkaan
+} // namespace ninetysix
 
 
 #endif

@@ -1,7 +1,7 @@
 #include "DiodeClipDistortion.h"
 #include <cmath>
 
-namespace sudwalfulkaan {
+namespace ninetysix {
 
 void DiodeClipDistortion::Init() {
     drive01_ = 0.f;
@@ -27,4 +27,4 @@ float DiodeClipDistortion::Process(float x) {
     return x * (1.f + diodeDrive_) / (1.f + std::fabs(x * diodeDrive_));
 }
 
-} // namespace sudwalfulkaan
+} // namespace ninetysix

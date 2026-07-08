@@ -1,6 +1,6 @@
 #pragma once
 
-namespace sudwalfulkaan {
+namespace ninetysix {
 
 /**
  * @brief BPM estimation from a gate/clock input (Schmitt + interval timing).
@@ -23,4 +23,4 @@ private:
     float smoothing_factor_;
 };
 
-} // namespace sudwalfulkaan
+} // namespace ninetysix

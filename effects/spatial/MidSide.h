@@ -3,7 +3,7 @@
 
 #include <cmath>
 
-namespace sudwalfulkaan {
+namespace ninetysix {
     class MidSide {
         public:
             void Init(float width, float sampleRate);

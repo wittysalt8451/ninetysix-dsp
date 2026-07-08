@@ -2,7 +2,7 @@
 #include <algorithm>
 #include <cmath>
 
-namespace sudwalfulkaan {
+namespace ninetysix {
 
 namespace {
 float Clamp01(float x) {
@@ -24,4 +24,4 @@ float MapLogarithmic(float normalized, float min, float max) {
     return std::exp(logMin + t * (logMax - logMin));
 }
 
-} // namespace sudwalfulkaan
+} // namespace ninetysix

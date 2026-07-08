@@ -2,7 +2,7 @@
 #include <cmath>
 #include <algorithm>
 
-namespace sudwalfulkaan {
+namespace ninetysix {
 
 void EnvelopeFollower::Init(float smoothing) {
     smooth_cv_ = 0.0f;
@@ -19,4 +19,4 @@ float EnvelopeFollower::Process(float inL, float inR) {
     return std::max(0.0f, std::min(1.0f, smooth_cv_));
 }
 
-} // namespace sudwalfulkaan
+} // namespace ninetysix

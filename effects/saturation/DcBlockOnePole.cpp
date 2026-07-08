@@ -1,6 +1,6 @@
 #include "DcBlockOnePole.h"
 
-namespace sudwalfulkaan {
+namespace ninetysix {
 
 void DcBlockOnePole::Init(float coefficient) {
     coefficient_ = coefficient;
@@ -20,4 +20,4 @@ float DcBlockOnePole::Process(float x) {
     return y;
 }
 
-} // namespace sudwalfulkaan
+} // namespace ninetysix

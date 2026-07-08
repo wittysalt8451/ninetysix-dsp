@@ -1,6 +1,6 @@
-# sudwalfulkaan-dsp
+# ninetysix-dsp
 
-Shared DSP effects and UI library for Súdwâlfulkaan eurorack modules.
+Shared DSP effects and UI library for ninetysix eurorack modules.
 
 ## Structure
 
@@ -13,7 +13,7 @@ ui/            Human interface: pots, buttons, smoothing tied to controls
 utils/         Hardware-agnostic helpers (mapping, slew, tempo math, level follower)
 ```
 
-All types live in namespace `sudwalfulkaan`.
+All types live in namespace `ninetysix`.
 
 ## Effects
 
@@ -69,7 +69,7 @@ Migrating from the old single `tools.cpp` is documented in [REFACTOR_TOOLS.md](R
 Link or symlink this directory as `library/` in your module project:
 
 ```bash
-ln -s ../sudwalfulkaan-dsp library
+ln -s ../ninetysix-dsp library
 ```
 
 Add include paths so `effects/`, `envelopes/`, `control/`, `ui/`, and `utils/` resolve:
@@ -124,4 +124,4 @@ Tests live in `tests/test_utils.cpp`. Add cases there or split into more transla
 
 ## Author
 
-Súdwâlfulkaan
+ninetysix
