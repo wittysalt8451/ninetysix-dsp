@@ -19,6 +19,7 @@ void UIManager::Update() {
     button_.Debounce();
     toggle_.Debounce();
 
+    button_state_ = button_.Pressed();
     if(button_.RisingEdge() && button_pressed_callback_) {
         button_pressed_callback_();
     }

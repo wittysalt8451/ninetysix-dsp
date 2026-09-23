@@ -26,6 +26,15 @@ namespace ninetysix {
 
       /** @brief Current panel toggle (B8) state after debounce; updated in Update(). */
       bool GetTogglePressed() const { return toggle_state_; }
+
+      /**
+       * @brief Current panel button (B7) state after debounce; updated in Update().
+       *
+       * The callback only fires on the rising edge, so a module that needs to
+       * time a long press -- hold to clear, hold to enter a mode -- has to read
+       * the level itself and count in its own control tick.
+       */
+      bool GetButtonPressed() const { return button_state_; }
   
       void SetPotValue(int index, float value);  // feed raw ADC [0..1]
   
@@ -36,6 +45,7 @@ namespace ninetysix {
     private:
       daisy::Switch button_;
       daisy::Switch toggle_;
+      bool button_state_ = false;
       bool toggle_state_ = false;
       bool last_toggle_state_ = false;
   
