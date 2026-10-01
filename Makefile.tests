@@ -10,6 +10,7 @@ SOURCES := tests/test_utils.cpp \
 	tests/test_spectral.cpp \
 	tests/test_reverb.cpp \
 	tests/test_modulation.cpp \
+	tests/test_glitch.cpp \
 	utils/Mapping.cpp \
 	utils/Tempo.cpp \
 	utils/Slew.cpp \
@@ -22,7 +23,8 @@ SOURCES := tests/test_utils.cpp \
 	effects/modulation/StereoChorus.cpp \
 	effects/modulation/StereoPhaser.cpp \
 	effects/filters/Biquad.cpp \
-	effects/dynamics/Limiter.cpp
+	effects/dynamics/Limiter.cpp \
+	effects/glitch/Stutter.cpp
 
 .PHONY: test check clean
 

@@ -15,6 +15,7 @@ if(BUILD_TESTING)
     tests/test_spectral.cpp
     tests/test_reverb.cpp
     tests/test_modulation.cpp
+    tests/test_glitch.cpp
     utils/Mapping.cpp
     utils/Tempo.cpp
     utils/Slew.cpp
@@ -28,6 +29,7 @@ if(BUILD_TESTING)
     effects/modulation/StereoPhaser.cpp
     effects/filters/Biquad.cpp
     effects/dynamics/Limiter.cpp
+    effects/glitch/Stutter.cpp
   )
 
   target_include_directories(ninetysix_tests PRIVATE

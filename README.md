@@ -30,6 +30,7 @@ All types live in namespace `ninetysix`.
 | StereoPhaser | modulation | Stereo phaser with LFO |
 | FDN4Reverb | reverb | 4-line FDN reverb (Householder matrix, decorrelated stereo, no external deps) |
 | SpectralStretch | spectral | Paulstretch-style spectral time stretch (crossfaded random-phase grains) with spectral pitch shift, onset-following playhead and freeze |
+| Stutter | glitch | Clock-locked beat repeat (roll) and reverse; with a clock both switch on and off on the downbeat |
 
 ## Envelopes
 
