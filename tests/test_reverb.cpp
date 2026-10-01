@@ -3,6 +3,7 @@
 #include "effects/reverb/FDN4Reverb.h"
 
 #include <cmath>
+#include <cstdint>
 #include <vector>
 
 using ninetysix::FDN4Reverb;
