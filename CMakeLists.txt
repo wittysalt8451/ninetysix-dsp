@@ -14,6 +14,7 @@ if(BUILD_TESTING)
     tests/test_utils.cpp
     tests/test_spectral.cpp
     tests/test_reverb.cpp
+    tests/test_echo_resonator.cpp
     tests/test_modulation.cpp
     utils/Mapping.cpp
     utils/Tempo.cpp
@@ -26,6 +27,8 @@ if(BUILD_TESTING)
     effects/reverb/FDN4Reverb.cpp
     effects/modulation/StereoChorus.cpp
     effects/modulation/StereoPhaser.cpp
+    effects/delay/Echo.cpp
+    effects/filters/Resonator.cpp
     effects/filters/Biquad.cpp
     effects/dynamics/Limiter.cpp
   )

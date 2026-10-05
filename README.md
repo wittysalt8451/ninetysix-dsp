@@ -21,6 +21,7 @@ All types live in namespace `ninetysix`.
 |--------|--------|-------------|
 | Biquad | filters | Biquad filter (LP, HP, BP, notch, peak, shelves) |
 | LinkwitzRileyCrossover | filters | Linkwitz-Riley crossover filter |
+| Resonator | filters | Tuned stereo comb resonator: damped feedback delay with pitch glide, constant ring time and level compensation |
 | TapeDrive | saturation | Analog tape saturation emulation with LP filter |
 | Tanh | saturation | Tanh soft saturation (`TanhSaturation` class) |
 | Limiter | dynamics | Stereo limiter with envelope follower |
@@ -29,6 +30,7 @@ All types live in namespace `ninetysix`.
 | StereoChorus | modulation | Stereo chorus |
 | StereoPhaser | modulation | Stereo phaser with LFO |
 | FDN4Reverb | reverb | 4-line FDN reverb (Householder matrix, decorrelated stereo, no external deps) |
+| Echo | delay | Beat-synced stereo echo after the DJM ECHO: filtered feedback, echo-out tail, click-free delay changes |
 | SpectralStretch | spectral | Paulstretch-style spectral time stretch (crossfaded random-phase grains) with spectral pitch shift, onset-following playhead and freeze |
 
 ## Envelopes
