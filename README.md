@@ -22,8 +22,10 @@ All types live in namespace `ninetysix`.
 | Biquad | filters | Biquad filter (LP, HP, BP, notch, peak, shelves) |
 | LinkwitzRileyCrossover | filters | Linkwitz-Riley crossover filter |
 | Resonator | filters | Tuned stereo comb resonator: damped feedback delay with pitch glide, constant ring time and level compensation |
+| StateVariableFilter | filters | Double-sampled state variable filter (LP, HP, BP, notch, peak) with resonance drive; sample-exact port of DaisySP's Svf |
 | TapeDrive | saturation | Analog tape saturation emulation with LP filter |
 | Tanh | saturation | Tanh soft saturation (`TanhSaturation` class) |
+| Bitcrush | saturation | Bit-depth reduction with a fractional (smoothly sweepable) depth |
 | Limiter | dynamics | Stereo limiter with envelope follower |
 | Ducker | dynamics | Stereo sidechain ducker |
 | MidSide | spatial | Mid/side stereo width processing |
@@ -31,6 +33,7 @@ All types live in namespace `ninetysix`.
 | StereoPhaser | modulation | Stereo phaser with LFO |
 | FDN4Reverb | reverb | 4-line FDN reverb (Householder matrix, decorrelated stereo, no external deps) |
 | Echo | delay | Beat-synced stereo echo after the DJM ECHO: filtered feedback, echo-out tail, click-free delay changes |
+| Stutter | glitch | Clock-locked beat repeat (roll) and reverse, aligned to where the audio's own beat lands |
 | SpectralStretch | spectral | Paulstretch-style spectral time stretch (crossfaded random-phase grains) with spectral pitch shift, onset-following playhead and freeze |
 
 ## Envelopes

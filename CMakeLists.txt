@@ -15,6 +15,7 @@ if(BUILD_TESTING)
     tests/test_spectral.cpp
     tests/test_reverb.cpp
     tests/test_echo_resonator.cpp
+    tests/test_svf_bitcrush.cpp
     tests/test_modulation.cpp
     utils/Mapping.cpp
     utils/Tempo.cpp
@@ -29,6 +30,8 @@ if(BUILD_TESTING)
     effects/modulation/StereoPhaser.cpp
     effects/delay/Echo.cpp
     effects/filters/Resonator.cpp
+    effects/filters/StateVariableFilter.cpp
+    effects/saturation/Bitcrush.cpp
     effects/filters/Biquad.cpp
     effects/dynamics/Limiter.cpp
   )
