@@ -176,6 +176,8 @@ void FDN4Reverb::Process(float inL, float inR, float* outL, float* outR) {
     // in the mono sum
     const float wetL = 0.6f * (d[0] + d[2]);
     const float wetR = 0.6f * (d[1] + d[3]);
-    *outL = Clamp(dryL * dry_gain_ + wetL * wet_gain_, -1.0f, 1.0f);
-    *outR = Clamp(dryR * dry_gain_ + wetR * wet_gain_, -1.0f, 1.0f);
+    // No clamp here: a hot input sums well over full scale, and hard
+    // clipping it before the module's limiter sounded harsh
+    *outL = dryL * dry_gain_ + wetL * wet_gain_;
+    *outR = dryR * dry_gain_ + wetR * wet_gain_;
 }
