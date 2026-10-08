@@ -17,6 +17,7 @@ if(BUILD_TESTING)
     tests/test_echo_resonator.cpp
     tests/test_svf_bitcrush.cpp
     tests/test_modulation.cpp
+    tests/test_lookahead_limiter.cpp
     utils/Mapping.cpp
     utils/Tempo.cpp
     utils/Slew.cpp
@@ -34,6 +35,7 @@ if(BUILD_TESTING)
     effects/saturation/Bitcrush.cpp
     effects/filters/Biquad.cpp
     effects/dynamics/Limiter.cpp
+    effects/dynamics/LookaheadLimiter.cpp
   )
 
   target_include_directories(ninetysix_tests PRIVATE

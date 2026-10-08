@@ -27,6 +27,7 @@ All types live in namespace `ninetysix`.
 | Tanh | saturation | Tanh soft saturation (`TanhSaturation` class) |
 | Bitcrush | saturation | Bit-depth reduction with a fractional (smoothly sweepable) depth |
 | Limiter | dynamics | Stereo limiter with envelope follower |
+| LookaheadLimiter | dynamics | Clean stereo-linked brickwall limiter: lookahead, drive into a ceiling, no clipping or waveshaping |
 | Ducker | dynamics | Stereo sidechain ducker |
 | MidSide | spatial | Mid/side stereo width processing |
 | StereoChorus | modulation | Stereo chorus |
