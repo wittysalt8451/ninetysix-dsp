@@ -12,6 +12,10 @@ namespace ninetysix {
     // Mono-summed input, decorrelated stereo output. The Householder matrix
     // is orthogonal, so with per-line gains < 1 the loop cannot run away,
     // even at Decay = 1.
+    //
+    // The output is not clipped: dry plus wet can go well over full scale
+    // on a hot input (+6 dB and more at long decays), so follow it with a
+    // limiter rather than a hard clamp.
     class FDN4Reverb {
     public:
         static constexpr size_t kNumLines = 4;

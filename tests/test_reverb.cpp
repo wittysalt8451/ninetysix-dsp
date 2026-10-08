@@ -168,3 +168,30 @@ TEST_CASE("FDN4Reverb degrades gracefully with a small buffer")
     }
     CHECK(any_wet);
 }
+
+TEST_CASE("FDN4Reverb does not clip a hot input")
+{
+    // A full-scale brassy tone (six harmonics) at a long decay sums over
+    // 1.0; it must come out unclipped for the limiter after it, not
+    // flattened at 1.0
+    FDN4Reverb rv;
+    rv.Init(kSampleRate, reverb_buffer, FDN4Reverb::kBufferSize);
+    rv.SetDecay(0.8f);
+    rv.SetMix(0.8f);
+    float peak = 0.0f;
+    int at_one = 0;
+    float outL, outR;
+    for (int n = 0; n < static_cast<int>(kSampleRate); n++) {
+        float x = 0.0f;
+        for (int h = 1; h <= 6; h++) {
+            x += std::sin(6.2831853f * 233.0f * h * n / kSampleRate) / h;
+        }
+        x /= 1.35f;  // peak of the sum: full scale
+        rv.Process(x, x, &outL, &outR);
+        REQUIRE(std::isfinite(outL));
+        peak = std::fmax(peak, std::fabs(outL));
+        if (std::fabs(outL) == 1.0f) at_one++;
+    }
+    CHECK(peak > 1.2f);
+    CHECK(at_one == 0);
+}
